@@ -1,6 +1,6 @@
 function playerwon() {
   player1.style.backgroundColor = "green";
-  score.innerText = "you won";
+  score.innerText = "You won";
   actScore = 0;
 }
 
@@ -13,7 +13,6 @@ player1.addEventListener("mousemove", () => {
   player1.style.backgroundColor = "yellow";
 
   actScore = actScore + 1;
-  actScore = Math.round(actScore);
   console.log(actScore);
   score.innerText = actScore;
 });
