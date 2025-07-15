@@ -9,9 +9,16 @@
   font-weight: 400;
   font-style: normal;
 }
+h1{
+    font-size : 100px;
+}
 
-
-
+#header{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
 .playarea{
     margin: auto;   
     background-color: beige;
@@ -29,5 +36,5 @@
     width: 100px;
 }
 #score{
-    font-size: 100px;
+    font-size: 80px;
 }

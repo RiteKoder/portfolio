@@ -1,26 +1,37 @@
+// getting HTML elements
+const player1 = document.getElementById("player1");
+let score = document.getElementById("score");
+
+// Setting up initial score
+let actScore = 0;
+let slowScore = 0;
+
+// Funtions
 function playerwon() {
   player1.style.backgroundColor = "green";
   score.innerText = "You won";
   actScore = 0;
 }
+function playerLose() {
+  score.innerText = "You lose , your score is " + slowScore;
+  actScore = 0;
+}
 
-const player1 = document.getElementById("player1");
-
-let actScore = 0;
-let score = document.getElementById("score");
-
-player1.addEventListener("mousemove", () => {
+function mouseIsOver() {
   player1.style.backgroundColor = "yellow";
-
   actScore = actScore + 1;
-  console.log(actScore);
-  score.innerText = actScore;
-});
+  slowScore = Math.floor(actScore / 5);
+
+  console.log(slowScore);
+  score.innerText = slowScore;
+}
+
+player1.addEventListener("drag", mouseIsOver);
+
 player1.addEventListener("mouseleave", () => {
-  if (actScore > 50) {
+  if (slowScore > 50) {
     playerwon();
   } else {
-    score.innerText = "You lose , your score is " + actScore;
-    actScore = 0;
+    playerLose();
   }
 });
