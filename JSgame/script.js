@@ -1,6 +1,7 @@
 // getting HTML elements
-const player1 = document.getElementById("player1");
+const player1 = document.getElementById("hitbox");
 let score = document.getElementById("score");
+score.innerText = "0";
 
 // Setting up initial score
 let actScore = 0;
@@ -12,7 +13,7 @@ let idt = 0;
 player1.addEventListener("mouseover", mouseIsOver);
 
 function mouseIsOver() {
-  player1.style.backgroundColor = "yellow";
+  hitbox.style.backgroundColor = "yellow";
   idt = setInterval(() => {
     actScore = actScore + 1;
     slowScore = actScore;
@@ -21,7 +22,7 @@ function mouseIsOver() {
   }, 200);
 }
 
-player1.addEventListener("mouseleave", () => {
+hitbox.addEventListener("mouseleave", () => {
   gameLogic(slowScore);
 });
 
@@ -51,13 +52,13 @@ function gameLogic(slowScore) {
 }
 
 function playerwon() {
-  player1.style.backgroundColor = "green";
+  hitbox.style.backgroundColor = "green";
   score.innerText = "You won " + slowScore + " is a Prime";
   actScore = 0;
   clearInterval(idt);
 }
 function playerLose() {
-  player1.style.backgroundColor = "red";
+  hitbox.style.backgroundColor = "red";
   score.innerText = "You lose , " + slowScore + " is not a prime";
   actScore = 0;
   clearInterval(idt);
