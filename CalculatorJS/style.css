@@ -1,0 +1,18 @@
+.container{
+    position: relative;
+    background-color: aqua;
+    height: 700px;
+    width: 500px;
+    margin-left: 33%;
+    margin-top: 5%;
+
+}
+.calculator{
+    display:grid;
+}
+
+.buttonArea{
+    /* display: grid; */
+    
+}
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Playwrite+DK+Loopet:wght@100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .work-sans-fon {
+        font-family: "Work Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    * {
+        margin: 0px;
+        /* padding: px; */
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-row: 5fr;
+        gap: 2px;
+
+        width: 100%;
+        height: 80vh;
+        /* padding: 10px; */
+    }
+
+    .row {
+        display: grid;
+        background-color: steelblue;
+        border: 2px solid black;
+        justify-items: center;
+        align-items: center;
+        /* gap: 10px; */
+        font-size: 1.5rem;
+    }
+
+    #row1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #row2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #row3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #row4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #row5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #entertext {
+        font-size: 3rem;
+    }
+
+    #loanamount {
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+
+    <div class="container work-sans-fon">
+
+        <div class="row" id="row1">
+            <div id="entertext">Enter Loan Amount</div>
+            <div>
+                <input type="number" name="loanamount" id="loanamount">
+            </div>
+
+
+        </div>
+        <div class="row" id="row2">
+            <div class="headers">Name</div>
+            <div class="headers">Value</div>
+            <div class="headers">LTV</div>
+
+
+        </div>
+        <div class="row" id="row3">
+            <div class="ibb">IBB</div>
+            <div class="ibb">
+                <input type="number" id="ibbvalue">
+            </div>
+            <div class="ibb">ibbLTV</div>
+        </div>
+        <div class="row" id="row4">
+            <div class="obv">obv</div>
+            <div class="obv">
+                <input type="number" id="obvvalue">
+            </div>
+            <div class="obv">obvLTV</div>
+        </div>
+        <div class="row" id="row5">
+            <div class="exval">exval</div>
+            <div class="exval">
+                <input type="number" id="extvalue">
+            </div>
+            <div class="exval">exvalLTV</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
