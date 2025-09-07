@@ -4,26 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RKP Site</title>
+    <title>RKP Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .project-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .project-list li {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-list a {
+            text-decoration: none;
+            color: #4f46e5;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .project-list a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Welcome to my Website...</h1>
-    <ul>
-        <li>
-            <a href="JSgame/index.html">My Javascript Game</a>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my projects and works below</p>
+    </header>
 
-        </li>
-        <li>
-            <a href="NextFolio/index.html">Porfolio 0.5</a>
+    <main>
+        <ul class="project-list">
+            <li><a href="JSgame/index.html">🎮 My Javascript Game</a></li>
+            <li><a href="webdevprojects/SpotifyClone/index.html">🎶Music Player</a></li>
 
-        </li>
-        <li>
-            <a href="FOIR/">FOIR</a>
+        </ul>
+    </main>
 
-        </li>
-    </ul>
-
+    <footer>
+        <p>© 2025 Ritesh Kumar Panda</p>
+    </footer>
 </body>
 
 </html>
