@@ -100,10 +100,24 @@ nav ul li {
 .playlogo {
   padding: 0 23px;
 }
-.songItemContainer{
+.songItemContainer {
   display: flex;
   flex-direction: column;
   margin-top: 24px;
   justify-content: space-evenly;
+}
+.songinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+  gap: 24px;
+  /* background-color: blue; */
+  position: absolute;
+  left: 10vw;
+  padding: 20px 0 0;
+}
 
+.songinfo img {
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
