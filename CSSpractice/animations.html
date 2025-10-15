@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Animation</title>
     <style>
+        #box1 {
+            height: 250px;
+            width: 250px;
+            background: grey;
+            border: 3px solid;
+            font-size: 225px;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        #box1:hover {
+
+            animation: rainbow 5s ;
+            
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes mySlide {
+            from {
+                /* margin-left: 0%; */
+                /* font-size: 225px; */
+
+            }
+
+            to {
+                font-family: sans-serif;
+                /* font-size: 50px; */
+                margin-top: 100%;
+            }
+
+        }
+        @keyframes rainbow {
+            0%{background-color: orange;}
         
+            50%{background-color: yellow}
+            
+            100%{background-color: red}
+            
+            
+        }
     </style>
 </head>
+
 <body>
-    
+
+    <div id="box1">HI</div>
 
 </body>
+
 </html>
